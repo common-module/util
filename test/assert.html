@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+        <script type="text/javascript" src="http://shallker.github.io/module-manager/src/module-manager.js"></script>
+        <script type="text/javascript" src="../src/assert.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var assert = require('util:assert.js');
+
+            /**
+             * assert.equal
+             */
+            assert.equal(1, 1, 'assert.equal 工作正常');
+            assert.equal(1, '1', 'assert.equal 工作正常');
+
+            /**
+             * assert.notEqual
+             */
+            assert.notEqual(1, 0, 'assert.notEqual 工作正常');
+
+            /**
+             * assert.strictEqual
+             */
+            assert.strictEqual(1, 1, 'assert.strictEqual 工作正常');
+
+            /**
+             * assert.notStrictEqual
+             */
+            assert.notStrictEqual(1, '1', 'assert.notStrictEqual 工作正常');
+
+            /**
+             * assert.throws
+             */
+            assert.throws(function () {
+                lookWhatIDid();
+            }, 'assert.throws 工作正常');
+
+            /**
+             * assert.doesNotThrow
+             */
+            assert.doesNotThrow(function () {
+                var status = "I'm good!";
+            }, 'assert.doesNotThrow 工作正常');
+        </script>
+    </body>
+</html>
