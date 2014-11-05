@@ -89,6 +89,36 @@ define('util:assert.js', function (require, exports, module) {
     }
 
     /**
+     * 对象存在
+     * @param  {Mix} object      被检测对象
+     * @param  {String} passMessage 通过消息
+     */
+    exports.ok = function (object, passMessage) {
+        if (object) {
+            if (passMessage) {
+                print(passMessage);
+            }
+        } else {
+            throw new Error('object is not ok');
+        }
+    }
+
+    /**
+     * 对象不存在
+     * @param  {Mix} object      被检测对象
+     * @param  {String} passMessage 通过消息
+     */
+    exports.notOk = function (object, passMessage) {
+        if (object) {
+            throw new Error('object is ok');
+        } else {
+            if (passMessage) {
+                print(passMessage);
+            }
+        }
+    }
+
+    /**
      * 抛出错误
      * @param  {Function} func         函数
      * @param  {String} passMessage 检测通过消息
