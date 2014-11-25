@@ -1,0 +1,7 @@
+{
+    "util:assert": "./src/assert.js",
+    "util:extend": "./src/extend.js",
+    "util:inherit": "./src/inherit.js",
+    "util:log": "./src/log.js",
+    "util:print": "./src/print.js"
+}
