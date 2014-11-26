@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>extend</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+        <script type="text/javascript" src="http://common-module.github.io/modulejs/src/modulejs.js"></script>
+        <script type="text/javascript" src="http://common-module.github.io/modulejs/src/modulejs-register.js"></script>
+        <script type="text/javascript" src="../src/extend.js"></script>
+        <script type="text/javascript" src="http://shallker.github.io/learn-jasmine/03-load-jasmine-2.0/load-jasmine-from-github.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            describe('extend', function () {
+                var extend = require('util:extend');
+
+                it('应该是个函数', function () {
+                    expect(typeof extend).toEqual('function');
+                });
+
+                it('应该扩展一个对象', function () {
+                    var foo = {foo: 'foo'};
+                    var bar = {bar: 'bar'};
+
+                    extend(foo, bar);
+
+                    expect(foo.bar).toEqual('bar');
+                    expect(bar.foo).toEqual(undefined);
+                });
+            });
+        </script>
+    </body>
+</html>
